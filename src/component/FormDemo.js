@@ -1,5 +1,5 @@
 
-import {TextInput,Button} from '@mantine/core'
+import {TextInput,Button, PasswordInput} from '@mantine/core'
 import '@mantine/core/styles.css'
 import { useState } from 'react'
 function FormDemo() {
@@ -25,13 +25,13 @@ address:address
   return (
     <div className='Demo'>
         
-        <form onSubmit={submitHandler}>
+        <form className='formdemo'onSubmit={submitHandler}>
            
-      <TextInput type="text"placeholder={'Enter your name'}value={name}onChange={(e)=>setName(e.target.value)}></TextInput><br/>
-      <TextInput type="number"placeholder={'Enter your phonenumber'}value={phonenumber}onChange={(e)=>setPhoneNumber(e.target.value)}></TextInput><br/>
-      <TextInput type="email"placeholder={'Enter your email'}value={email}onChange={(e)=>setEmail(e.target.value)}></TextInput><br/>
-      <TextInput type="password"placeholder={'Enter the password'}value={password}onChange={(e)=>setPassword(e.target.value)}></TextInput><br/>
-      <TextInput type="address"placeholder={'Enter your address'}value={address}onChange={(e)=>setAddress(e.target.value)}></TextInput><br/>
+      <TextInput type="text"placeholder={'Enter your name'}label="NAME:"value={name}onChange={(e)=>setName(e.target.value)}></TextInput><br/>
+      <TextInput type="number"placeholder={'Enter your phonenumber'}label="PHONENUMBER:"value={phonenumber}onChange={(e)=>setPhoneNumber(e.target.value)}></TextInput><br/>
+      <TextInput type="address"placeholder={'Enter your address'}label="ADDRESS:"value={address}onChange={(e)=>setAddress(e.target.value)}></TextInput><br/>
+      <TextInput type="email"placeholder={'Enter your email'}label="EMAIL:"value={email}onChange={(e)=>setEmail(e.target.value)}></TextInput><br/>
+      <PasswordInput type="password"placeholder={'Enter the password'}label="PASSWORD:"value={password}onChange={(e)=>setPassword(e.target.value)}></PasswordInput><br/>
       <Button radius="xl"fullWidth>submit</Button></form>
     </div>
   )
